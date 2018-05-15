@@ -1,0 +1,5 @@
+iter = 1, feature_num = 856, test_percent = 0.10
+Test accuracy: 0.8498
+Test RMSE: 0.5364
+------------------------------------
+

@@ -12,7 +12,7 @@ import svm
 from feature import *
 
 maxIter = 10
-topWordSize = 300
+topWordSize = 600
 testPercent = .1
 
 def reWeight(weight, res, target):
