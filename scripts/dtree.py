@@ -14,7 +14,7 @@ criterion = 'entropy'
 splitter = 'random'
 max_features = None
 
-def train(topSet, X, Y, test_size=testPercent):
+def train(topSet, X, Y, test_size=testPercent, sample_weight=None):
     X_new = genXFeature(topSet, X)
     X_arr = np.array(X_new)
     Y_arr = np.array(Y)
@@ -27,7 +27,7 @@ def train(topSet, X, Y, test_size=testPercent):
     print("Y: ", y_train.shape)
     # print("X[0]: ", X_train[0])
     clf = DTC(criterion=criterion, splitter=splitter, max_features=max_features)
-    clf.fit(X_train, y_train)
+    clf.fit(X_train, y_train, sample_weight=sample_weight)
 
     # test
     if test_size > 0:

@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 
 testPercent = .1
 
-def train(topSet, X, Y, test_size=testPercent):
+def train(topSet, X, Y, test_size=testPercent, sample_weight=None):
     X_new = genXFeature(topSet, X)
     X_arr = np.array(X_new)
     Y_arr = np.array(Y)
@@ -23,7 +23,7 @@ def train(topSet, X, Y, test_size=testPercent):
     print("Y: ", y_train.shape)
     # print("X[0]: ", X_train[0])
     clf = LinearSVC(random_state=0)
-    clf.fit(X_train, y_train)
+    clf.fit(X_train, y_train, sample_weight=sample_weight)
 
     # print(clf.coef_)
     # print(clf.intercept_)
