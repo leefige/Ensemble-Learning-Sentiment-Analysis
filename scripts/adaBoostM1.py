@@ -190,11 +190,11 @@ if __name__ == '__main__':
     (X, Y) = getTrainData()
     topSet = genTopWordSet(X, Y, topWordSize)
 
-    forest, betas = boostDtree(topSet, X, Y)
-    # forest = boostSVM(topSet, X, Y)
+    # forest, betas = boostDtree(topSet, X, Y)
+    forest, betas = boostSVM(topSet, X, Y)
 
     X_valid = getValidData()
-    y_valid = validateDTree(forest, betas, topSet, X_valid)
-    # y_valid = validateSVM(forest, betas, topSet, X_valid)
+    # y_valid = validateDTree(forest, betas, topSet, X_valid)
+    y_valid = validateSVM(forest, betas, topSet, X_valid)
     print(y_valid[:10])
     genSubmission(y_valid)
