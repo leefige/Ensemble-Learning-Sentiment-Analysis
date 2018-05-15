@@ -13,6 +13,7 @@ testPercent = .1
 criterion = 'entropy'
 splitter = 'random'
 max_features = None
+maxDepth = None
 
 def train(topSet, X, Y, test_size=testPercent):
     X_new = genXFeature(topSet, X)
@@ -26,7 +27,7 @@ def train(topSet, X, Y, test_size=testPercent):
     print("X: ", X_train.shape)
     print("Y: ", y_train.shape)
     # print("X[0]: ", X_train[0])
-    clf = DTC(criterion=criterion, splitter=splitter, max_features=max_features)
+    clf = DTC(criterion=criterion, splitter=splitter, max_features=max_features, max_depth=maxDepth)
     clf.fit(X_train, y_train)
 
     # test
@@ -38,7 +39,8 @@ def train(topSet, X, Y, test_size=testPercent):
         test_res = clf.predict(X_test)
         detail = "criterion=%s, splitter=%s, max_features=%s\n" % (criterion, splitter, str(max_features))
         detail += "feature num: " + str(len(topSet)) + "\n"
-        detail += "testPercent: " + str(test_size)
+        detail += "testPercent: " + str(test_size) + "\n"
+        detail += "maxDepth: " + str(maxDepth)
         showTestResult(test_res, y_test, clType='DTree', title=detail)
 
     return clf
@@ -52,7 +54,7 @@ def validate(clf, topSet, X):
 
 if __name__ == '__main__':
     (X, Y) = getTrainData()
-    topSet = genTopWordSet(X, Y, 50)
+    topSet = genTopWordSet(X, Y, 2000)
 
     clf = train(topSet, X, Y)
 
