@@ -12,7 +12,7 @@ import svm
 from feature import *
 
 maxIter = 10
-topWordSize = 500
+topWordSize = 300
 testPercent = .1
 
 def reWeight(weight, res, target):
@@ -118,50 +118,70 @@ def boostDtree(topSet, X, Y):
 
     return forest, betas
 
-# def boostSVM(topSet, X, Y):
-#     print("Boosting: SVM")
+def boostSVM(topSet, X, Y):
+    print("Boosting: SVM")
     
-#     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=testPercent)
-#     trainLen = len(X_train)
-#     print("Boosting Train set size: ", trainLen)
+    X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=testPercent)
+    trainLen = len(X_train)
+    print("Boosting Train set size: ", trainLen)
 
-#     forest = []
-#     sampleSize = int(trainLen * sampleRate)
-#     for i in range(0, dtNum):
-#         print("\nGenerating svm %d..." % i)
-#         X_smpl, y_smpl = sampling(X_train, y_train, random.randint(int(sampleSize / 2), sampleSize))
-#         tree = svm.train(topSet, X_smpl, y_smpl, test_size=0.1)
-#         forest.append(tree)
+    forest = []
+    betas = []
+    initWeight = 1.0 / trainLen
+    sampleWeight = [initWeight for i in range(trainLen)]
+    
+    # boosting
+    for i in range(0, maxIter):
+        print("\nBoosting SVM %d..." % i)
+        # NOTE: test_size should be 0 to satisfy init weight
+        tree = svm.train(topSet, X_train, y_train, test_size=0, sample_weight=sampleWeight)
+        y_train_res = svm.validate(tree, topSet, X_train)
+        # reweight
+        sampleWeight, beta = reWeight(sampleWeight, y_train_res, y_train)
+        # check abort
+        if (sampleWeight == None) or (beta == 0):
+            break
+        else:
+            forest.append(tree)
+            betas.append(beta)
+            
+    # test
+    testLen = len(y_test)
+    print("\nBoosting Test set size: ", testLen)
 
-#     # test
-#     testLen = len(y_test)
-#     # X_test_new = genXFeature(topSet, X_test)
-#     # X_test_arr = np.array(X_test_new)
-#     # Y_test_arr = np.array(y_test)
-#     print("\nBoosting Test set size: ", testLen)
+    res = []
+    clfCnt = len(forest)
+    for i in range(0, clfCnt):
+        res.append(svm.validate(forest[i], topSet, X_test))
+        # print(res[i][:10])
 
-#     res = []
-#     for i in range(0, dtNum):
-#         res.append(svm.validate(forest[i], topSet, X_test))
-#         # print(res[i][:10])
+    boostRes = getBoostRes(res, betas)
+    detail = "iter = %d, feature_num = %d, test_percent = %.2f" % (clfCnt, len(topSet), testPercent)
+    showTestResult(boostRes, y_test, clType='Boosting_SVM', title=detail)
 
-#     boostRes = maxCntRes(res)
-#     detail = "dtNum = %d, feature_num = %d, test_percent = %.2f, sample_size = %.2f" % (dtNum, len(topSet), testPercent, sampleRate)
-#     showTestResult(boostRes, y_test, clType='Boosting_SVM', title=detail)
-
-#     return forest
+    return forest, betas
     
 # validate
-def validate(boostClf, betas, topSet, X):
-    print("\nBoosting Validating...")
-    # X_new = genXFeature(topSet, X)
-    # X_arr = np.array(X_new)
+def validateDTree(boostClf, betas, topSet, X):
+    print("\nBoosting DTree Validating...")
     print("X: ", len(X))
 
     res = []
     clfCnt = len(boostClf)
     for i in range(0, clfCnt):
         res.append(dtree.validate(boostClf[i], topSet, X))
+    boostRes = getBoostRes(res, betas)
+
+    return boostRes
+
+def validateSVM(boostClf, betas, topSet, X):
+    print("\nBoosting SVM Validating...")
+    print("X: ", len(X))
+
+    res = []
+    clfCnt = len(boostClf)
+    for i in range(0, clfCnt):
+        res.append(svm.validate(boostClf[i], topSet, X))
     boostRes = getBoostRes(res, betas)
 
     return boostRes
@@ -174,6 +194,7 @@ if __name__ == '__main__':
     # forest = boostSVM(topSet, X, Y)
 
     X_valid = getValidData()
-    y_valid = validate(forest, betas, topSet, X_valid)
+    y_valid = validateDTree(forest, betas, topSet, X_valid)
+    # y_valid = validateSVM(forest, betas, topSet, X_valid)
     print(y_valid[:10])
     genSubmission(y_valid)
