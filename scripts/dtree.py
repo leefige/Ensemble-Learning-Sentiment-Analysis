@@ -2,10 +2,14 @@ from feature import *
 from util import *
 
 import numpy as np
-from sklearn.svm import LinearSVC
+from sklearn.tree import DecisionTreeClassifier as DTC
 from sklearn.model_selection import train_test_split
 
 testPercent = .1
+
+criterion = 'entropy'
+splitter = 'random'
+max_features = None
 
 def train(topSet, X, Y, test_size=testPercent):
     X_new = genXFeature(topSet, X)
@@ -13,17 +17,14 @@ def train(topSet, X, Y, test_size=testPercent):
     Y_arr = np.array(Y)
 
     # classify
-    X_train, X_test, y_train, y_test = train_test_split(X_arr, Y_arr, test_size=test_size, random_state=0)
-    print("Training...")
+    X_train, X_test, y_train, y_test = train_test_split(X_arr, Y_arr, test_size=test_size)
+    print("DTree Training...")
     print("train set:")
     print("X: ", X_train.shape)
     print("Y: ", y_train.shape)
     # print("X[0]: ", X_train[0])
-    clf = LinearSVC(random_state=0)
+    clf = DTC(criterion=criterion, splitter=splitter, max_features=max_features)
     clf.fit(X_train, y_train)
-
-    # print(clf.coef_)
-    # print(clf.intercept_)
 
     # test
     if test_size > 0:
@@ -32,9 +33,10 @@ def train(topSet, X, Y, test_size=testPercent):
         print("X: ", X_test.shape)
         print("Y: ", y_test.shape)
         test_res = clf.predict(X_test)
-        detail = "feature num: " + str(len(topSet)) + "\n"
+        detail = "criterion=%s, splitter=%s, max_features=%s\n" % (criterion, splitter, str(max_features))
+        detail += "feature num: " + str(len(topSet)) + "\n"
         detail += "testPercent: " + str(test_size)
-        showTestResult(test_res, y_test, clType='SVM', title=detail)
+        showTestResult(test_res, y_test, clType='DTree', title=detail)
 
     return clf
 
@@ -47,7 +49,7 @@ def validate(clf, topSet, X):
 
 if __name__ == '__main__':
     (X, Y) = getTrainData()
-    topSet = genTopWordSet(X, Y, 1000)
+    topSet = genTopWordSet(X, Y, 50)
 
     clf = train(topSet, X, Y)
 
