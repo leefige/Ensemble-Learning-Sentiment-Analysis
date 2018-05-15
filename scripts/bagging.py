@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import dtree, svm
 from feature import *
 
