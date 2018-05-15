@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import random
 
-topWordSize = 150
+topWordSize = 500
 dtNum = 5
 testPercent = .1
 sampleRate = 0.5
