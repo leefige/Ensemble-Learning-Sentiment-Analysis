@@ -51,21 +51,28 @@ def validate(clf, topSet, X):
     return clf.predict(X_arr)
 
 if __name__ == '__main__':
-    (X, Y) = getTrainData()
+    # (X, Y) = getTrainData()
 
-    # topSet = genTopWordSet(X, Y, 50)
-    # X_new = genXFeature(topSet, X)
+    # # topSet = genTopWordSet(X, Y, 50)
+    # # X_new = genXFeature(topSet, X)
 
-    topSet = genIDFDict(X)
-    X_new = genTFIDFFeature(topSet, X)
+    # topSet = genIDFDict(X)
+    # X_new = genTFIDFFeature(topSet, X)
 
-    clf = train(topSet, X_new, Y)
+    # clf = train(topSet, X_new, Y)
 
-    X_valid = getValidData()
+    # X_valid = getValidData()
     
-    # X_valid_new = genXFeature(topSet, X_valid)
-    X_valid_new = genTFIDFFeature(topSet, X_valid)
+    # # X_valid_new = genXFeature(topSet, X_valid)
+    # X_valid_new = genTFIDFFeature(topSet, X_valid)
 
-    y_valid = validate(clf, topSet, X_valid_new)
+    # y_valid = validate(clf, topSet, X_valid_new)
+    # print(y_valid[:10])
+    # genSubmission(y_valid)
+
+    words, vocab, X_, Y = getTrainData_tfidf(1000)
+    clf = train(words, X_, Y)
+
+    x_v = getValidData_tfidf(words, vocab)
+    y_valid = validate(clf, words, x_v)
     print(y_valid[:10])
-    genSubmission(y_valid)

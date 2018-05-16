@@ -47,14 +47,21 @@ def validate(clf, topSet, X):
     return clf.predict(X_arr)
 
 if __name__ == '__main__':
-    (X, Y) = getTrainData()
-    topSet = genTopWordSet(X, Y, 1000)
+    # (X, Y) = getTrainData()
+    # topSet = genTopWordSet(X, Y, 1000)
 
-    X_new = genXFeature(topSet, X)
-    clf = train(topSet, X_new, Y)
+    # X_new = genXFeature(topSet, X)
+    # clf = train(topSet, X_new, Y)
 
-    X_valid = getValidData()
-    X_valid_new = genXFeature(topSet, X_valid)
-    y_valid = validate(clf, topSet, X_valid_new)
+    # X_valid = getValidData()
+    # X_valid_new = genXFeature(topSet, X_valid)
+    # y_valid = validate(clf, topSet, X_valid_new)
+    # print(y_valid[:10])
+    # genSubmission(y_valid)
+
+    words, vocab, X_, Y = getTrainData_tfidf(5000)
+    clf = train(words, X_, Y)
+
+    x_v = getValidData_tfidf(words, vocab)
+    y_valid = validate(clf, words, x_v)
     print(y_valid[:10])
-    genSubmission(y_valid)
