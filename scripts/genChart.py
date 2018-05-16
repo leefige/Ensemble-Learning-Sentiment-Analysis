@@ -55,4 +55,9 @@ if __name__ == '__main__':
     extractBag("Bagging", "svm")
     extractBoost("Boosting", "dtree")
     extractBoost("Boosting", "svm")
+
+    extractBag("idf__Bagging", "dtree")
+    extractBag("idf__Bagging", "svm")
+    extractBoost("idf__Boosting", "dtree")
+    extractBoost("idf__Boosting", "svm")
     
