@@ -6,11 +6,13 @@ import random
 
 from util import *
 
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 negPrefix = "NOT_"
 
 negaWords = set(["不", "不是", "没", "没有", "木有"])
 stopWord = set(["的", "你", "我", "地", "得", "了", "很"])
-punc = set(['，', '。', '！', '~', '？', '、', '…', '~', '《', '》', '“', '”', '‘', '’', '?', '!', ',', '.', '...', '@', '#', '*', '$', '￥', '%'])
+punc = set(['，', '。', '！', '~', '？', '、', '…', '~', '《', '》', '“', '”', '‘', '’', '?', '!', ',', '.', '...', '@', '#', '*', '$', '￥', '%', '/', '-'])
 
 # XSet: [[], [], ...]
 # return: set()
@@ -99,6 +101,9 @@ def parseNeg(X):
             # is stop word / null?
             if word in stopWord or word == '':
                 continue
+            # is number?
+            if re.match(r"[\d\.]+", word):
+                continue
 
             # is punctuation?
             if word in punc:
@@ -171,6 +176,23 @@ def genTFIDFFeature(idf, X):
         X_new.append(featLi)
     return X_new
 
+def skTFIDFPreproc(X):
+    res = []
+    for li in X:
+        res.append(" ".join(li))
+    return res
+
+def genSkTFIDF(X, maxFeatures=None):
+    # print("stop: ", list(stopWord.union(punc)))
+    tfidfVecorizer = TfidfVectorizer(analyzer='word', max_features=maxFeatures, stop_words=list(stopWord.union(punc)))
+    tfidf = tfidfVecorizer.fit_transform(X)  
+    # tfidf.todense()  
+    vocab = tfidfVecorizer.vocabulary_ 
+    words = tfidfVecorizer.get_feature_names()
+    feature = tfidf.toarray()
+    # print(feature[:10])
+    return words, vocab, feature
+
 # get data of train
 def getTrainData():
     (X, Y) = readTrainData()
@@ -182,8 +204,24 @@ def getValidData():
     X = readValidData()
     return parseNeg(X)
 
-if __name__ == '__main__':
+def getTrainData_tfidf(N=None):
     (X, Y) = getTrainData()
-    idf = genIDFDict(X)
-    X_ = genTFIDFFeature(idf, X)
+    X = skTFIDFPreproc(X)
+    words, vocab, X_ = genSkTFIDF(X, maxFeatures=N)
+    return words, vocab, X_, Y
+
+def getValidData_tfidf(words, vocab):
+    X = getValidData()
+    X = skTFIDFPreproc(X)
+    tfidfVecorizer = TfidfVectorizer(analyzer='word', vocabulary=vocab, stop_words=list(stopWord.union(punc)))
+    tfidf = tfidfVecorizer.fit_transform(X)  
+    feature = tfidf.toarray()
+    return feature
+
+if __name__ == '__main__':
+    words, vocab, X_, Y = getTrainData_tfidf(80)
+    print(words[:20])
     print(X_[0])
+
+    x_v = getValidData_tfidf(words, vocab)
+    print(x_v[0])
