@@ -118,7 +118,7 @@ def boost(clfType, topSet, X, Y):
 
     boostRes = getBoostRes(res, betas)
     detail = "iter = %d, feature_num = %d, test_percent = %.2f" % (clfCnt, len(topSet), testPercent)
-    showTestResult(boostRes, y_test, clType='Boosting_%s'%(clfType.__name__), title=detail)
+    showTestResult(boostRes, y_test, clType='idf__Boosting_%s'%(clfType.__name__), title=detail)
 
     return forest, betas
     

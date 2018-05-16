@@ -8,6 +8,7 @@
 ./bagging.py -c d -n 3 -t 2000 -r 0.5
 ./bagging.py -c d -n 3 -t 5000 -r 0.5
 ./bagging.py -c d -n 3 -t 10000 -r 0.5
+./bagging.py -c d -n 3 -t 20000 -r 0.5
 
 ./bagging.py -c d -n 3 -t 1000 -r 0.5
 ./bagging.py -c d -n 5 -t 1000 -r 0.5
@@ -34,6 +35,7 @@
 ./bagging.py -c s -n 3 -t 2000 -r 0.5
 ./bagging.py -c s -n 3 -t 5000 -r 0.5
 ./bagging.py -c s -n 3 -t 10000 -r 0.5
+./bagging.py -c s -n 3 -t 20000 -r 0.5
 
 ./bagging.py -c s -n 3 -t 1000 -r 0.5
 ./bagging.py -c s -n 5 -t 1000 -r 0.5

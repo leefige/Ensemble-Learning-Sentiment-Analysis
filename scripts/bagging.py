@@ -83,7 +83,7 @@ def bagging(clfType, topSet, X, Y):
 
     baggingRes = maxCntRes(res)
     detail = "dtNum = %d, feature_num = %d, test_percent = %.2f, sample_size = %.2f" % (dtNum, len(topSet), testPercent, sampleRate)
-    showTestResult(baggingRes, y_test, clType='Bagging_%s'%(clfType.__name__), title=detail)
+    showTestResult(baggingRes, y_test, clType='idf__Bagging_%s'%(clfType.__name__), title=detail)
 
     return forest
     

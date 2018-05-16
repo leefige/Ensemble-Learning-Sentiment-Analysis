@@ -8,6 +8,7 @@
 ./adaBoostM1.py -c d -t 2000 -i 5
 ./adaBoostM1.py -c d -t 5000 -i 5
 ./adaBoostM1.py -c d -t 10000 -i 5
+./adaBoostM1.py -c d -t 20000 -i 5
 
 ./adaBoostM1.py -c d -t 1000 -i 2
 ./adaBoostM1.py -c d -t 1000 -i 3
@@ -27,6 +28,7 @@
 ./adaBoostM1.py -c s -t 2000 -i 5
 ./adaBoostM1.py -c s -t 5000 -i 5
 ./adaBoostM1.py -c s -t 10000 -i 5
+./adaBoostM1.py -c s -t 20000 -i 5
 
 ./adaBoostM1.py -c s -t 1000 -i 2
 ./adaBoostM1.py -c s -t 1000 -i 3
