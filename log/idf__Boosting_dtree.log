@@ -1,0 +1,35 @@
+iter = 2, feature_num = 50, test_percent = 0.10
+Test accuracy: 0.6848
+Test RMSE: 0.8076
+------------------------------------
+
+iter = 2, feature_num = 100, test_percent = 0.10
+Test accuracy: 0.7238
+Test RMSE: 0.7373
+------------------------------------
+
+iter = 2, feature_num = 200, test_percent = 0.10
+Test accuracy: 0.7497
+Test RMSE: 0.6877
+------------------------------------
+
+iter = 3, feature_num = 500, test_percent = 0.10
+Test accuracy: 0.7679
+Test RMSE: 0.6713
+------------------------------------
+
+iter = 3, feature_num = 750, test_percent = 0.10
+Test accuracy: 0.7701
+Test RMSE: 0.6583
+------------------------------------
+
+iter = 2, feature_num = 1000, test_percent = 0.10
+Test accuracy: 0.7794
+Test RMSE: 0.6391
+------------------------------------
+
+iter = 2, feature_num = 2000, test_percent = 0.10
+Test accuracy: 0.7679
+Test RMSE: 0.6657
+------------------------------------
+

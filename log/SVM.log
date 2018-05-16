@@ -629,3 +629,603 @@ Test accuracy: 0.8335
 Test RMSE: 0.5628
 ------------------------------------
 
+feature num: 50
+testPercent: 0.1
+Test accuracy: 0.7291
+Test RMSE: 0.7535
+------------------------------------
+
+feature num: 50
+testPercent: 0.1
+Test accuracy: 0.7056
+Test RMSE: 0.7799
+------------------------------------
+
+feature num: 50
+testPercent: 0.1
+Test accuracy: 0.7114
+Test RMSE: 0.7961
+------------------------------------
+
+feature num: 100
+testPercent: 0.1
+Test accuracy: 0.7686
+Test RMSE: 0.6713
+------------------------------------
+
+feature num: 100
+testPercent: 0.1
+Test accuracy: 0.7604
+Test RMSE: 0.7065
+------------------------------------
+
+feature num: 100
+testPercent: 0.1
+Test accuracy: 0.7464
+Test RMSE: 0.7481
+------------------------------------
+
+feature num: 200
+testPercent: 0.1
+Test accuracy: 0.7849
+Test RMSE: 0.6627
+------------------------------------
+
+feature num: 200
+testPercent: 0.1
+Test accuracy: 0.8076
+Test RMSE: 0.5997
+------------------------------------
+
+feature num: 200
+testPercent: 0.1
+Test accuracy: 0.7813
+Test RMSE: 0.6332
+------------------------------------
+
+feature num: 500
+testPercent: 0.1
+Test accuracy: 0.7976
+Test RMSE: 0.6304
+------------------------------------
+
+feature num: 500
+testPercent: 0.1
+Test accuracy: 0.8180
+Test RMSE: 0.5919
+------------------------------------
+
+feature num: 500
+testPercent: 0.1
+Test accuracy: 0.7833
+Test RMSE: 0.6328
+------------------------------------
+
+feature num: 750
+testPercent: 0.1
+Test accuracy: 0.8173
+Test RMSE: 0.5564
+------------------------------------
+
+feature num: 750
+testPercent: 0.1
+Test accuracy: 0.8019
+Test RMSE: 0.5971
+------------------------------------
+
+feature num: 750
+testPercent: 0.1
+Test accuracy: 0.8013
+Test RMSE: 0.5977
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8219
+Test RMSE: 0.5700
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8158
+Test RMSE: 0.5795
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8065
+Test RMSE: 0.5843
+------------------------------------
+
+feature num: 2000
+testPercent: 0.1
+Test accuracy: 0.8099
+Test RMSE: 0.5739
+------------------------------------
+
+feature num: 2000
+testPercent: 0.1
+Test accuracy: 0.8026
+Test RMSE: 0.5787
+------------------------------------
+
+feature num: 2000
+testPercent: 0.1
+Test accuracy: 0.7991
+Test RMSE: 0.5855
+------------------------------------
+
+feature num: 5000
+testPercent: 0.1
+Test accuracy: 0.8167
+Test RMSE: 0.5763
+------------------------------------
+
+feature num: 5000
+testPercent: 0.1
+Test accuracy: 0.7927
+Test RMSE: 0.5913
+------------------------------------
+
+feature num: 5000
+testPercent: 0.1
+Test accuracy: 0.8060
+Test RMSE: 0.5755
+------------------------------------
+
+feature num: 10000
+testPercent: 0.1
+Test accuracy: 0.8173
+Test RMSE: 0.5709
+------------------------------------
+
+feature num: 10000
+testPercent: 0.1
+Test accuracy: 0.8022
+Test RMSE: 0.5732
+------------------------------------
+
+feature num: 10000
+testPercent: 0.1
+Test accuracy: 0.8028
+Test RMSE: 0.5803
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8063
+Test RMSE: 0.6062
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8324
+Test RMSE: 0.5545
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8091
+Test RMSE: 0.5764
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8254
+Test RMSE: 0.5568
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8359
+Test RMSE: 0.5515
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8094
+Test RMSE: 0.5693
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8074
+Test RMSE: 0.5554
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8292
+Test RMSE: 0.5409
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7960
+Test RMSE: 0.6058
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7924
+Test RMSE: 0.6239
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8013
+Test RMSE: 0.5920
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7982
+Test RMSE: 0.5990
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8237
+Test RMSE: 0.5582
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8187
+Test RMSE: 0.5729
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7829
+Test RMSE: 0.6325
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8166
+Test RMSE: 0.5740
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8218
+Test RMSE: 0.5495
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8193
+Test RMSE: 0.5487
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8013
+Test RMSE: 0.5834
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7918
+Test RMSE: 0.5885
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8256
+Test RMSE: 0.5706
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8200
+Test RMSE: 0.5770
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8006
+Test RMSE: 0.5939
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8231
+Test RMSE: 0.5718
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8081
+Test RMSE: 0.5791
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8174
+Test RMSE: 0.5714
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8154
+Test RMSE: 0.5767
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8086
+Test RMSE: 0.5804
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8179
+Test RMSE: 0.5717
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8220
+Test RMSE: 0.5663
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8116
+Test RMSE: 0.5886
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8145
+Test RMSE: 0.5678
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8397
+Test RMSE: 0.5358
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8105
+Test RMSE: 0.5690
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8389
+Test RMSE: 0.5261
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8090
+Test RMSE: 0.5696
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8040
+Test RMSE: 0.5868
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8146
+Test RMSE: 0.5778
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8086
+Test RMSE: 0.5766
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8132
+Test RMSE: 0.5603
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8044
+Test RMSE: 0.5865
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8118
+Test RMSE: 0.5751
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8319
+Test RMSE: 0.5343
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8142
+Test RMSE: 0.5690
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8093
+Test RMSE: 0.5842
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8094
+Test RMSE: 0.6255
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8230
+Test RMSE: 0.5582
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8296
+Test RMSE: 0.5475
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7579
+Test RMSE: 0.6629
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8319
+Test RMSE: 0.5238
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8039
+Test RMSE: 0.6152
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7129
+Test RMSE: 0.7493
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7948
+Test RMSE: 0.6108
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7985
+Test RMSE: 0.5985
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7589
+Test RMSE: 0.6591
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7947
+Test RMSE: 0.6235
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7774
+Test RMSE: 0.6061
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7981
+Test RMSE: 0.5512
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.7562
+Test RMSE: 0.6503
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8373
+Test RMSE: 0.5510
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8124
+Test RMSE: 0.5539
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8184
+Test RMSE: 0.5690
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8037
+Test RMSE: 0.5928
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8115
+Test RMSE: 0.6003
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8030
+Test RMSE: 0.5845
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8133
+Test RMSE: 0.5940
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8141
+Test RMSE: 0.5668
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8053
+Test RMSE: 0.5864
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8292
+Test RMSE: 0.5649
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8215
+Test RMSE: 0.5747
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8150
+Test RMSE: 0.5753
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8145
+Test RMSE: 0.5720
+------------------------------------
+
+feature num: 1000
+testPercent: 0.1
+Test accuracy: 0.8184
+Test RMSE: 0.5676
+------------------------------------
+
