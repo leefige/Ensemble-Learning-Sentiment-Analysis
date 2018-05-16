@@ -185,3 +185,91 @@ Test accuracy: 0.7765
 Test RMSE: 0.6550
 ------------------------------------
 
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7061
+Test RMSE: 0.7730
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7076
+Test RMSE: 0.8005
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7178
+Test RMSE: 0.7492
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.6783
+Test RMSE: 0.8058
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.6877
+Test RMSE: 0.7891
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7012
+Test RMSE: 0.7746
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.6996
+Test RMSE: 0.7836
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7198
+Test RMSE: 0.7282
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.6997
+Test RMSE: 0.7794
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7046
+Test RMSE: 0.7916
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.6977
+Test RMSE: 0.7606
+------------------------------------
+

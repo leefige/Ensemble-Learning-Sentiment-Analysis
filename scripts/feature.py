@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 #-*- coding: UTF-8 -*-
 
-from util import *
+import math
 import random
+
+from util import *
 
 negPrefix = "NOT_"
 
@@ -49,6 +51,37 @@ def genTopWordSet(X, Y, N):
     topBad = calcTopWords(bad, N)
     topNorm = calcTopWords(norm, N)
     return list(topGood.union(topBad).union(topNorm))
+
+def genIDFDict(X, N=None):
+    total = len(X)
+    allWord = {}
+    # create item
+    for li in X:
+        # unify
+        liSet = set(li)
+        # count
+        for word in liSet:
+            if word not in allWord.keys():
+                allWord[word] = 0
+            allWord[word] += 1
+    # calc idf
+    for key in allWord.keys():
+        allWord[key] = math.log(float(total) / (1 + allWord[key]))
+    # get top
+    if (N != None) and (N > 0):
+        # sort
+        sortedWords = list(sorted(allWord, key=lambda x: allWord[x], reverse=True))
+        cnt = 0
+        resDict = {}
+        for word in sortedWords:
+            resDict[word] = allWord[word]
+            cnt += 1
+            if cnt >= N:
+                break
+        return resDict
+    # or, just return all
+    else:
+        return allWord
 
 # function: 
 #   parse negative words
@@ -113,6 +146,31 @@ def genXFeature(topSet, X):
         X_new.append(featLi)
     return X_new
 
+def genTFIDFFeature(idf, X):
+    print("Generating tf-idf features...")
+    featNum = len(idf)
+    X_new = []
+    for review in X:
+        featDict = {}
+        # init
+        for tw in idf.keys():
+            featDict[tw] = 0
+        # calc freq
+        for word in review:
+            if word in featDict.keys():
+                featDict[word] += 1
+        # normalize tf
+        wordCnt = len(review)
+        for feat in featDict.keys():
+            featDict[feat] = float(featDict[feat]) / wordCnt
+        # generate list in order
+        featLi = []
+        for tw in idf.keys():
+            featLi.append(featDict[tw])
+        assert(len(featLi) == featNum)
+        X_new.append(featLi)
+    return X_new
+
 # get data of train
 def getTrainData():
     (X, Y) = readTrainData()
@@ -125,6 +183,7 @@ def getValidData():
     return parseNeg(X)
 
 if __name__ == '__main__':
-    (X, Y) = readTrainData()
-    X_ = parseNeg(X)
-    print(X_[:20])
+    (X, Y) = getTrainData()
+    idf = genIDFDict(X)
+    X_ = genTFIDFFeature(idf, X)
+    print(X_[0])

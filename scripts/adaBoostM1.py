@@ -12,7 +12,7 @@ import svm
 from feature import *
 
 maxIter = 10
-topWordSize = 600
+topWordSize = 50
 testPercent = .1
 
 def reWeight(weight, res, target):
@@ -75,8 +75,8 @@ def getBoostRes(results, betas):
     return finRes
             
 
-def boostDtree(topSet, X, Y):
-    print("Boosting: DTree")
+def boost(clfType, topSet, X, Y):
+    print("Boosting: %s" % clfType.__name__)
     
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=testPercent)
     trainLen = len(X_train)
@@ -89,10 +89,10 @@ def boostDtree(topSet, X, Y):
     
     # boosting
     for i in range(0, maxIter):
-        print("\nBoosting tree %d..." % i)
+        print("\nBoosting %s %d..." % (clfType.__name__, i))
         # NOTE: test_size should be 0 to satisfy init weight
-        tree = dtree.train(topSet, X_train, y_train, test_size=0, sample_weight=sampleWeight)
-        y_train_res = dtree.validate(tree, topSet, X_train)
+        tree = clfType.train(topSet, X_train, y_train, test_size=0, sample_weight=sampleWeight)
+        y_train_res = clfType.validate(tree, topSet, X_train)
         # reweight
         sampleWeight, beta = reWeight(sampleWeight, y_train_res, y_train)
         # check abort
@@ -109,92 +109,39 @@ def boostDtree(topSet, X, Y):
     res = []
     clfCnt = len(forest)
     for i in range(0, clfCnt):
-        res.append(dtree.validate(forest[i], topSet, X_test))
+        res.append(clfType.validate(forest[i], topSet, X_test))
         # print(res[i][:10])
 
     boostRes = getBoostRes(res, betas)
     detail = "iter = %d, feature_num = %d, test_percent = %.2f" % (clfCnt, len(topSet), testPercent)
-    showTestResult(boostRes, y_test, clType='Boosting_DTree', title=detail)
-
-    return forest, betas
-
-def boostSVM(topSet, X, Y):
-    print("Boosting: SVM")
-    
-    X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=testPercent)
-    trainLen = len(X_train)
-    print("Boosting Train set size: ", trainLen)
-
-    forest = []
-    betas = []
-    initWeight = 1.0 / trainLen
-    sampleWeight = [initWeight for i in range(trainLen)]
-    
-    # boosting
-    for i in range(0, maxIter):
-        print("\nBoosting SVM %d..." % i)
-        # NOTE: test_size should be 0 to satisfy init weight
-        tree = svm.train(topSet, X_train, y_train, test_size=0, sample_weight=sampleWeight)
-        y_train_res = svm.validate(tree, topSet, X_train)
-        # reweight
-        sampleWeight, beta = reWeight(sampleWeight, y_train_res, y_train)
-        # check abort
-        if (sampleWeight == None) or (beta == 0):
-            break
-        else:
-            forest.append(tree)
-            betas.append(beta)
-            
-    # test
-    testLen = len(y_test)
-    print("\nBoosting Test set size: ", testLen)
-
-    res = []
-    clfCnt = len(forest)
-    for i in range(0, clfCnt):
-        res.append(svm.validate(forest[i], topSet, X_test))
-        # print(res[i][:10])
-
-    boostRes = getBoostRes(res, betas)
-    detail = "iter = %d, feature_num = %d, test_percent = %.2f" % (clfCnt, len(topSet), testPercent)
-    showTestResult(boostRes, y_test, clType='Boosting_SVM', title=detail)
+    showTestResult(boostRes, y_test, clType='Boosting_%s'%(clfType.__name__), title=detail)
 
     return forest, betas
     
 # validate
-def validateDTree(boostClf, betas, topSet, X):
-    print("\nBoosting DTree Validating...")
+def validate(clfType, boostClf, betas, topSet, X):
+    print("\nBoosting %s Validating..." % clfType.__name__)
     print("X: ", len(X))
 
     res = []
     clfCnt = len(boostClf)
     for i in range(0, clfCnt):
-        res.append(dtree.validate(boostClf[i], topSet, X))
-    boostRes = getBoostRes(res, betas)
-
-    return boostRes
-
-def validateSVM(boostClf, betas, topSet, X):
-    print("\nBoosting SVM Validating...")
-    print("X: ", len(X))
-
-    res = []
-    clfCnt = len(boostClf)
-    for i in range(0, clfCnt):
-        res.append(svm.validate(boostClf[i], topSet, X))
+        res.append(clfType.validate(boostClf[i], topSet, X))
     boostRes = getBoostRes(res, betas)
 
     return boostRes
 
 if __name__ == '__main__':
+    clfType = svm
+
     (X, Y) = getTrainData()
     topSet = genTopWordSet(X, Y, topWordSize)
 
-    # forest, betas = boostDtree(topSet, X, Y)
-    forest, betas = boostSVM(topSet, X, Y)
+    X_new = genXFeature(topSet, X)
+    forest, betas = boost(clfType, topSet, X_new, Y)
 
     X_valid = getValidData()
-    # y_valid = validateDTree(forest, betas, topSet, X_valid)
-    y_valid = validateSVM(forest, betas, topSet, X_valid)
+    X_valid_new = genXFeature(topSet, X_valid)
+    y_valid = validate(clfType, forest, betas, topSet, X_valid_new)
     print(y_valid[:10])
     genSubmission(y_valid)

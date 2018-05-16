@@ -11,8 +11,7 @@ from sklearn.model_selection import train_test_split
 testPercent = .1
 
 def train(topSet, X, Y, test_size=testPercent, sample_weight=None):
-    X_new = genXFeature(topSet, X)
-    X_arr = np.array(X_new)
+    X_arr = np.array(X)
     Y_arr = np.array(Y)
 
     # classify
@@ -43,8 +42,7 @@ def train(topSet, X, Y, test_size=testPercent, sample_weight=None):
 
 def validate(clf, topSet, X):
     print("Validating...")
-    X_new = genXFeature(topSet, X)
-    X_arr = np.array(X_new)
+    X_arr = np.array(X)
     print("X: ", X_arr.shape)
     return clf.predict(X_arr)
 
@@ -52,9 +50,11 @@ if __name__ == '__main__':
     (X, Y) = getTrainData()
     topSet = genTopWordSet(X, Y, 1000)
 
-    clf = train(topSet, X, Y)
+    X_new = genXFeature(topSet, X)
+    clf = train(topSet, X_new, Y)
 
     X_valid = getValidData()
-    y_valid = validate(clf, topSet, X_valid)
+    X_valid_new = genXFeature(topSet, X_valid)
+    y_valid = validate(clf, topSet, X_valid_new)
     print(y_valid[:10])
     genSubmission(y_valid)
