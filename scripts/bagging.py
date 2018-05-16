@@ -133,5 +133,6 @@ if __name__ == '__main__':
     X_valid = getValidData()
     X_valid_new = genXFeature(topSet, X_valid)
     y_valid = validate(clfType, forest, topSet, X_valid_new)
+    
     print(y_valid[:10])
     genSubmission(y_valid)
