@@ -159,14 +159,22 @@ if __name__ == '__main__':
         else:
             print("Ignore opt: %s" % name)
 
-    (X, Y) = getTrainData()
-    topSet = genTopWordSet(X, Y, topWordSize)
+    # (X, Y) = getTrainData()
+    # topSet = genTopWordSet(X, Y, topWordSize)
 
-    X_new = genXFeature(topSet, X)
-    forest, betas = boost(clfType, topSet, X_new, Y)
+    # X_new = genXFeature(topSet, X)
+    # forest, betas = boost(clfType, topSet, X_new, Y)
 
-    X_valid = getValidData()
-    X_valid_new = genXFeature(topSet, X_valid)
-    y_valid = validate(clfType, forest, betas, topSet, X_valid_new)
+    # X_valid = getValidData()
+    # X_valid_new = genXFeature(topSet, X_valid)
+    # y_valid = validate(clfType, forest, betas, topSet, X_valid_new)
+    # print(y_valid[:10])
+    # genSubmission(y_valid)
+
+    words, vocab, X_, Y = getTrainData_tfidf(topWordSize)
+    forest, betas = boost(clfType, words, X_, Y)
+
+    x_v = getValidData_tfidf(words, vocab)
+    y_valid = validate(clfType, forest, betas, words, x_v)
     print(y_valid[:10])
     genSubmission(y_valid)

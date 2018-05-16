@@ -58,3 +58,8 @@ Test accuracy: 0.7724
 Test RMSE: 0.6550
 ------------------------------------
 
+iter = 3, feature_num = 1000, test_percent = 0.10
+Test accuracy: 0.7592
+Test RMSE: 0.6691
+------------------------------------
+

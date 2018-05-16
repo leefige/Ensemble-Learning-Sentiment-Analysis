@@ -88,3 +88,8 @@ Test accuracy: 0.8008
 Test RMSE: 0.6282
 ------------------------------------
 
+dtNum = 5, feature_num = 1000, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.7958
+Test RMSE: 0.6251
+------------------------------------
+
