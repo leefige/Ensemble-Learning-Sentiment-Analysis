@@ -1,60 +1,60 @@
 iter = 2, feature_num = 82, test_percent = 0.10
-Test accuracy: 0.7729
-Test RMSE: 0.6882
+Test accuracy: 0.5330
+Test RMSE: 1.1210
 ------------------------------------
 
 iter = 1, feature_num = 158, test_percent = 0.10
-Test accuracy: 0.7985
-Test RMSE: 0.6476
+Test accuracy: 0.5403
+Test RMSE: 1.1058
 ------------------------------------
 
 iter = 1, feature_num = 308, test_percent = 0.10
-Test accuracy: 0.8128
-Test RMSE: 0.6158
+Test accuracy: 0.5403
+Test RMSE: 1.1080
 ------------------------------------
 
-iter = 2, feature_num = 724, test_percent = 0.10
-Test accuracy: 0.8344
-Test RMSE: 0.5628
+iter = 1, feature_num = 724, test_percent = 0.10
+Test accuracy: 0.5160
+Test RMSE: 1.1367
 ------------------------------------
 
 iter = 1, feature_num = 1069, test_percent = 0.10
-Test accuracy: 0.8457
-Test RMSE: 0.5339
+Test accuracy: 0.5321
+Test RMSE: 1.1092
 ------------------------------------
 
 iter = 1, feature_num = 1416, test_percent = 0.10
-Test accuracy: 0.8375
-Test RMSE: 0.5427
+Test accuracy: 0.5353
+Test RMSE: 1.0970
 ------------------------------------
 
 iter = 1, feature_num = 2903, test_percent = 0.10
-Test accuracy: 0.8466
-Test RMSE: 0.5356
+Test accuracy: 0.5410
+Test RMSE: 1.0993
+------------------------------------
+
+iter = 1, feature_num = 1416, test_percent = 0.10
+Test accuracy: 0.5376
+Test RMSE: 1.1123
+------------------------------------
+
+iter = 1, feature_num = 1416, test_percent = 0.10
+Test accuracy: 0.5242
+Test RMSE: 1.1076
+------------------------------------
+
+iter = 1, feature_num = 1416, test_percent = 0.10
+Test accuracy: 0.5376
+Test RMSE: 1.1058
 ------------------------------------
 
 iter = 2, feature_num = 1416, test_percent = 0.10
-Test accuracy: 0.8459
-Test RMSE: 0.5394
+Test accuracy: 0.5371
+Test RMSE: 1.0995
 ------------------------------------
 
-iter = 2, feature_num = 1416, test_percent = 0.10
-Test accuracy: 0.8355
-Test RMSE: 0.5477
-------------------------------------
-
-iter = 1, feature_num = 1416, test_percent = 0.10
-Test accuracy: 0.8489
-Test RMSE: 0.5366
-------------------------------------
-
-iter = 1, feature_num = 1416, test_percent = 0.10
-Test accuracy: 0.8396
-Test RMSE: 0.5477
-------------------------------------
-
-iter = 1, feature_num = 1416, test_percent = 0.10
-Test accuracy: 0.8446
-Test RMSE: 0.5462
+iter = 4, feature_num = 1416, test_percent = 0.10
+Test accuracy: 0.5453
+Test RMSE: 1.0818
 ------------------------------------
 

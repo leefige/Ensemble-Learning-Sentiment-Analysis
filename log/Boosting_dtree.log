@@ -1,50 +1,60 @@
-iter = 3, feature_num = 82, test_percent = 0.10
-Test accuracy: 0.7080
-Test RMSE: 0.7634
+iter = 2, feature_num = 82, test_percent = 0.10
+Test accuracy: 0.7025
+Test RMSE: 0.7792
 ------------------------------------
 
-iter = 2, feature_num = 158, test_percent = 0.10
-Test accuracy: 0.7304
-Test RMSE: 0.7216
+iter = 3, feature_num = 158, test_percent = 0.10
+Test accuracy: 0.7336
+Test RMSE: 0.7209
 ------------------------------------
 
 iter = 2, feature_num = 308, test_percent = 0.10
-Test accuracy: 0.7552
-Test RMSE: 0.6970
+Test accuracy: 0.7506
+Test RMSE: 0.6939
+------------------------------------
+
+iter = 4, feature_num = 724, test_percent = 0.10
+Test accuracy: 0.7701
+Test RMSE: 0.6686
 ------------------------------------
 
 iter = 1, feature_num = 1069, test_percent = 0.10
-Test accuracy: 0.7803
-Test RMSE: 0.6767
+Test accuracy: 0.7656
+Test RMSE: 0.6775
 ------------------------------------
 
-iter = 1, feature_num = 1416, test_percent = 0.10
-Test accuracy: 0.7704
-Test RMSE: 0.6654
+iter = 3, feature_num = 1416, test_percent = 0.10
+Test accuracy: 0.7642
+Test RMSE: 0.6730
 ------------------------------------
 
-iter = 2, feature_num = 1416, test_percent = 0.10
-Test accuracy: 0.7776
-Test RMSE: 0.6732
-------------------------------------
-
-iter = 1, feature_num = 1416, test_percent = 0.10
-Test accuracy: 0.7806
-Test RMSE: 0.6648
+iter = 2, feature_num = 2903, test_percent = 0.10
+Test accuracy: 0.7853
+Test RMSE: 0.6550
 ------------------------------------
 
 iter = 2, feature_num = 1416, test_percent = 0.10
-Test accuracy: 0.7803
-Test RMSE: 0.6384
+Test accuracy: 0.7611
+Test RMSE: 0.6839
+------------------------------------
+
+iter = 2, feature_num = 1416, test_percent = 0.10
+Test accuracy: 0.7729
+Test RMSE: 0.6655
+------------------------------------
+
+iter = 2, feature_num = 1416, test_percent = 0.10
+Test accuracy: 0.7527
+Test RMSE: 0.7022
+------------------------------------
+
+iter = 2, feature_num = 1416, test_percent = 0.10
+Test accuracy: 0.7624
+Test RMSE: 0.6888
 ------------------------------------
 
 iter = 1, feature_num = 1416, test_percent = 0.10
-Test accuracy: 0.7710
-Test RMSE: 0.6725
-------------------------------------
-
-iter = 1, feature_num = 1416, test_percent = 0.10
-Test accuracy: 0.7826
-Test RMSE: 0.6628
+Test accuracy: 0.7724
+Test RMSE: 0.6550
 ------------------------------------
 

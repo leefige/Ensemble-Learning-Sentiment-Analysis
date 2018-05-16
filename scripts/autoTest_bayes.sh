@@ -1,21 +1,21 @@
 # boost
-./adaBoostM1.py -c b -t 50 -i 5
-./adaBoostM1.py -c b -t 100 -i 5
-./adaBoostM1.py -c b -t 200 -i 5
-./adaBoostM1.py -c b -t 500 -i 5
-./adaBoostM1.py -c b -t 750 -i 5
-./adaBoostM1.py -c b -t 1000 -i 5
-./adaBoostM1.py -c b -t 2000 -i 5
-./adaBoostM1.py -c b -t 5000 -i 5
-./adaBoostM1.py -c b -t 10000 -i 5
+#./adaBoostM1.py -c b -t 50 -i 5
+#./adaBoostM1.py -c b -t 100 -i 5
+#./adaBoostM1.py -c b -t 200 -i 5
+#./adaBoostM1.py -c b -t 500 -i 5
+#./adaBoostM1.py -c b -t 750 -i 5
+#./adaBoostM1.py -c b -t 1000 -i 5
+#./adaBoostM1.py -c b -t 2000 -i 5
+#./adaBoostM1.py -c b -t 5000 -i 5
+#./adaBoostM1.py -c b -t 10000 -i 5
 
-./adaBoostM1.py -c b -t 1000 -i 2
-./adaBoostM1.py -c b -t 1000 -i 3
-./adaBoostM1.py -c b -t 1000 -i 4
-./adaBoostM1.py -c b -t 1000 -i 5
-./adaBoostM1.py -c b -t 1000 -i 6
+#./adaBoostM1.py -c b -t 1000 -i 2
+#./adaBoostM1.py -c b -t 1000 -i 3
+#./adaBoostM1.py -c b -t 1000 -i 4
+#./adaBoostM1.py -c b -t 1000 -i 5
+#./adaBoostM1.py -c b -t 1000 -i 6
 
-./stamp.py 5
+#./stamp.py 5
 
 # bag
 ./bagging.py -c b -n 3 -t 50 -r 0.5
