@@ -10,6 +10,7 @@ from sklearn.model_selection import train_test_split
 
 import dtree
 import svm
+import bayes
 from feature import *
 
 clfType = dtree
@@ -104,13 +105,15 @@ if __name__ == '__main__':
 
     for name, value in opts:
         if name == '-h':
-            print("Usage: %s -c [dtree|svm] -t topWordSize -n clfNum -r sampleRate" % sys.argv[0])
+            print("Usage: %s -c [dtree|svm|bayes] -t topWordSize -n clfNum -r sampleRate" % sys.argv[0])
             exit(-1)
         elif name == '-c':
             if value == 'd' or value == "dtree":
                 clfType = dtree
             elif value == 's' or value == "svm":
                 clfType = svm
+            elif value == 'b' or value == "bayes":
+                clfType = bayes
             else:
                 print("Bad clfType")
                 exit(-2)

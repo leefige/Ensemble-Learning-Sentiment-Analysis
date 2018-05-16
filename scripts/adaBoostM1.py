@@ -11,6 +11,7 @@ from sklearn.model_selection import train_test_split
 
 import dtree
 import svm
+import bayes
 from feature import *
 
 clfType = svm
@@ -146,6 +147,8 @@ if __name__ == '__main__':
                 clfType = dtree
             elif value == 's' or value == "svm":
                 clfType = svm
+            elif value == 'b' or value == "bayes":
+                clfType = bayes
             else:
                 print("Bad clfType")
                 exit(-2)
