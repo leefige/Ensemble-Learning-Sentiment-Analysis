@@ -22,6 +22,8 @@
 ./bagging.py -c d -n 5 -t 1000 -r 0.5
 ./bagging.py -c d -n 5 -t 1000 -r 0.75
 
+./stamp.py 1
+
 # bag svm
 ./bagging.py -c s -n 3 -t 50 -r 0.5
 ./bagging.py -c s -n 3 -t 100 -r 0.5
@@ -45,3 +47,5 @@
 ./bagging.py -c s -n 5 -t 1000 -r 0.3
 ./bagging.py -c s -n 5 -t 1000 -r 0.5
 ./bagging.py -c s -n 5 -t 1000 -r 0.75
+
+./stamp.py 2

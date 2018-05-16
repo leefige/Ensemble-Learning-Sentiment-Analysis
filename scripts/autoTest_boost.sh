@@ -15,6 +15,8 @@
 ./adaBoostM1.py -c d -t 1000 -i 5
 ./adaBoostM1.py -c d -t 1000 -i 6
 
+./stamp.py 3
+
 # boost svm
 ./adaBoostM1.py -c s -t 50 -i 5
 ./adaBoostM1.py -c s -t 100 -i 5
@@ -31,3 +33,5 @@
 ./adaBoostM1.py -c s -t 1000 -i 4
 ./adaBoostM1.py -c s -t 1000 -i 5
 ./adaBoostM1.py -c s -t 1000 -i 6
+
+./stamp.py 4
