@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 #-*- coding: UTF-8 -*-
 
+import getopt
 import math
 import random
+import sys
 
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -11,6 +13,7 @@ import dtree
 import svm
 from feature import *
 
+clfType = svm
 maxIter = 10
 topWordSize = 50
 testPercent = .1
@@ -132,7 +135,26 @@ def validate(clfType, boostClf, betas, topSet, X):
     return boostRes
 
 if __name__ == '__main__':
-    clfType = svm
+    opts, args = getopt.getopt(sys.argv[1:], "hc:i:t:")
+
+    for name, value in opts:
+        if name == '-h':
+            print("Usage: %s -c [dtree|svm] -t topWordSize -i maxIteration" % sys.argv[0])
+            exit(-1)
+        elif name == '-c':
+            if value == 'd' or value == "dtree":
+                clfType = dtree
+            elif value == 's' or value == "svm":
+                clfType = svm
+            else:
+                print("Bad clfType")
+                exit(-2)
+        elif name == '-t':
+            topWordSize = int(value)
+        elif name == '-i':
+            maxIter = int(value)
+        else:
+            print("Ignore opt: %s" % name)
 
     (X, Y) = getTrainData()
     topSet = genTopWordSet(X, Y, topWordSize)

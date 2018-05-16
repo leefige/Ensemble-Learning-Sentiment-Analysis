@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 #-*- coding: UTF-8 -*-
 
-import dtree, svm
+import getopt
+import random
+import sys
+
+import numpy as np
+from sklearn.model_selection import train_test_split
+
+import dtree
+import svm
 from feature import *
 
-from sklearn.model_selection import train_test_split
-import numpy as np
-import random
-
+clfType = dtree
 topWordSize = 50
 dtNum = 5
 testPercent = .1
@@ -94,7 +99,30 @@ def validate(clfType, bag, topSet, X):
     return baggingRes
 
 if __name__ == '__main__':
-    clfType = dtree
+
+    opts, args = getopt.getopt(sys.argv[1:], "hc:n:t:r:")
+
+    for name, value in opts:
+        if name == '-h':
+            print("Usage: %s -c [dtree|svm] -t topWordSize -n clfNum -r sampleRate" % sys.argv[0])
+            exit(-1)
+        elif name == '-c':
+            if value == 'd' or value == "dtree":
+                clfType = dtree
+            elif value == 's' or value == "svm":
+                clfType = svm
+            else:
+                print("Bad clfType")
+                exit(-2)
+        elif name == '-t':
+            topWordSize = int(value)
+        elif name == '-n':
+            dtNum = int(value)
+        elif name == '-r':
+            assert(float(value) <= 1)
+            sampleRate = float(value)
+        else:
+            print("Ignore opt: %s" % name)
 
     (X, Y) = getTrainData()
     topSet = genTopWordSet(X, Y, topWordSize)

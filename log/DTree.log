@@ -289,3 +289,100 @@ Test accuracy: 0.5205
 Test RMSE: 1.1356
 ------------------------------------
 
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.6915
+Test RMSE: 0.8080
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.6983
+Test RMSE: 0.8194
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7076
+Test RMSE: 0.7710
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.6953
+Test RMSE: 0.7689
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.6809
+Test RMSE: 0.7961
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 724
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7572
+Test RMSE: 0.6900
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 724
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7455
+Test RMSE: 0.7278
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 724
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7611
+Test RMSE: 0.6851
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 724
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7520
+Test RMSE: 0.6840
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 724
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7333
+Test RMSE: 0.7245
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 724
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7330
+Test RMSE: 0.7416
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 724
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7438
+Test RMSE: 0.7127
+------------------------------------
+
+=======================================================
