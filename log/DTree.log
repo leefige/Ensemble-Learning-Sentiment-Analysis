@@ -273,3 +273,19 @@ Test accuracy: 0.6977
 Test RMSE: 0.7606
 ------------------------------------
 
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7027
+Test RMSE: 0.7583
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 100
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.5205
+Test RMSE: 1.1356
+------------------------------------
+
