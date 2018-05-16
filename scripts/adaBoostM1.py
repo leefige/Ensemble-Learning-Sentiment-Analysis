@@ -45,7 +45,7 @@ def reWeight(weight, res, target):
         weightSum += neoWeight[i]
 
     # normalize
-    assert(weightSum <= 1)
+    # assert(weightSum <= 1)
     for i in range(0, total):
         neoWeight[i] = neoWeight[i] / weightSum
     
