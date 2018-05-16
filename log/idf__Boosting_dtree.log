@@ -33,3 +33,38 @@ Test accuracy: 0.7679
 Test RMSE: 0.6657
 ------------------------------------
 
+iter = 4, feature_num = 5000, test_percent = 0.10
+Test accuracy: 0.7606
+Test RMSE: 0.6757
+------------------------------------
+
+iter = 2, feature_num = 10000, test_percent = 0.10
+Test accuracy: 0.7831
+Test RMSE: 0.6389
+------------------------------------
+
+iter = 2, feature_num = 1000, test_percent = 0.10
+Test accuracy: 0.7645
+Test RMSE: 0.6616
+------------------------------------
+
+iter = 3, feature_num = 1000, test_percent = 0.10
+Test accuracy: 0.7738
+Test RMSE: 0.6540
+------------------------------------
+
+iter = 2, feature_num = 1000, test_percent = 0.10
+Test accuracy: 0.7715
+Test RMSE: 0.6573
+------------------------------------
+
+iter = 3, feature_num = 1000, test_percent = 0.10
+Test accuracy: 0.7717
+Test RMSE: 0.6618
+------------------------------------
+
+iter = 2, feature_num = 1000, test_percent = 0.10
+Test accuracy: 0.7744
+Test RMSE: 0.6398
+------------------------------------
+
