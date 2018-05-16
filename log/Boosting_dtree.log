@@ -1,0 +1,10 @@
+iter = 4, feature_num = 82, test_percent = 0.10
+Test accuracy: 0.7064
+Test RMSE: 0.7671
+------------------------------------
+
+iter = 2, feature_num = 158, test_percent = 0.10
+Test accuracy: 0.7302
+Test RMSE: 0.7284
+------------------------------------
+

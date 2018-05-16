@@ -386,3 +386,123 @@ Test RMSE: 0.7127
 ------------------------------------
 
 =======================================================
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.6900
+Test RMSE: 0.7971
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7023
+Test RMSE: 0.7899
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 82
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.6947
+Test RMSE: 0.7947
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 158
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7025
+Test RMSE: 0.7436
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 158
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7109
+Test RMSE: 0.7517
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 158
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7139
+Test RMSE: 0.7590
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 308
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7254
+Test RMSE: 0.7364
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 308
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7472
+Test RMSE: 0.7253
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 308
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7374
+Test RMSE: 0.7201
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 724
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7556
+Test RMSE: 0.6815
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 724
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7237
+Test RMSE: 0.7619
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 724
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7500
+Test RMSE: 0.7146
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 1069
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7504
+Test RMSE: 0.6951
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 1069
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7255
+Test RMSE: 0.7325
+------------------------------------
+
+criterion=entropy, splitter=random, max_features=None
+feature num: 1069
+testPercent: 0.1
+maxDepth: None
+Test accuracy: 0.7545
+Test RMSE: 0.6985
+------------------------------------
+
