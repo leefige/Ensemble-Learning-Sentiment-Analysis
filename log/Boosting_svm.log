@@ -1,0 +1,40 @@
+iter = 1, feature_num = 82, test_percent = 0.10
+Test accuracy: 0.7742
+Test RMSE: 0.6980
+------------------------------------
+
+iter = 1, feature_num = 308, test_percent = 0.10
+Test accuracy: 0.8182
+Test RMSE: 0.6035
+------------------------------------
+
+iter = 1, feature_num = 724, test_percent = 0.10
+Test accuracy: 0.8364
+Test RMSE: 0.5506
+------------------------------------
+
+iter = 2, feature_num = 1416, test_percent = 0.10
+Test accuracy: 0.8484
+Test RMSE: 0.5319
+------------------------------------
+
+iter = 1, feature_num = 2903, test_percent = 0.10
+Test accuracy: 0.8493
+Test RMSE: 0.5207
+------------------------------------
+
+iter = 1, feature_num = 1416, test_percent = 0.10
+Test accuracy: 0.8536
+Test RMSE: 0.5146
+------------------------------------
+
+iter = 1, feature_num = 1416, test_percent = 0.10
+Test accuracy: 0.8366
+Test RMSE: 0.5498
+------------------------------------
+
+iter = 1, feature_num = 1416, test_percent = 0.10
+Test accuracy: 0.8482
+Test RMSE: 0.5296
+------------------------------------
+

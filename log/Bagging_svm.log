@@ -1,0 +1,90 @@
+dtNum = 3, feature_num = 82, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.7683
+Test RMSE: 0.7012
+------------------------------------
+
+dtNum = 3, feature_num = 158, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.7935
+Test RMSE: 0.6633
+------------------------------------
+
+dtNum = 3, feature_num = 308, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.8076
+Test RMSE: 0.6238
+------------------------------------
+
+dtNum = 3, feature_num = 724, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.8300
+Test RMSE: 0.5779
+------------------------------------
+
+dtNum = 3, feature_num = 1069, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.8348
+Test RMSE: 0.5600
+------------------------------------
+
+dtNum = 3, feature_num = 1416, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.8300
+Test RMSE: 0.5702
+------------------------------------
+
+dtNum = 3, feature_num = 2903, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.8223
+Test RMSE: 0.5817
+------------------------------------
+
+dtNum = 3, feature_num = 1416, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.8269
+Test RMSE: 0.5724
+------------------------------------
+
+dtNum = 5, feature_num = 1416, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.8300
+Test RMSE: 0.5779
+------------------------------------
+
+dtNum = 7, feature_num = 1416, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.8278
+Test RMSE: 0.5710
+------------------------------------
+
+dtNum = 9, feature_num = 1416, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.8364
+Test RMSE: 0.5676
+------------------------------------
+
+dtNum = 11, feature_num = 1416, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.8464
+Test RMSE: 0.5618
+------------------------------------
+
+dtNum = 13, feature_num = 1416, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.8291
+Test RMSE: 0.5656
+------------------------------------
+
+dtNum = 5, feature_num = 1416, test_percent = 0.10, sample_size = 0.10
+Test accuracy: 0.8039
+Test RMSE: 0.6391
+------------------------------------
+
+dtNum = 5, feature_num = 1416, test_percent = 0.10, sample_size = 0.20
+Test accuracy: 0.8241
+Test RMSE: 0.5900
+------------------------------------
+
+dtNum = 5, feature_num = 1416, test_percent = 0.10, sample_size = 0.30
+Test accuracy: 0.8285
+Test RMSE: 0.5846
+------------------------------------
+
+dtNum = 5, feature_num = 1416, test_percent = 0.10, sample_size = 0.50
+Test accuracy: 0.8328
+Test RMSE: 0.5636
+------------------------------------
+
+dtNum = 5, feature_num = 1416, test_percent = 0.10, sample_size = 0.75
+Test accuracy: 0.8400
+Test RMSE: 0.5448
+------------------------------------
+
