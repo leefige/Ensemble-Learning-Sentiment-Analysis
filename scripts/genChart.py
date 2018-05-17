@@ -51,13 +51,15 @@ def extractBoost(name, ctype):
                     fout.write("%s|\n" % (rmse))
 
 if __name__ == '__main__':
-    extractBag("Bagging", "dtree")
-    extractBag("Bagging", "svm")
-    extractBoost("Boosting", "dtree")
-    extractBoost("Boosting", "svm")
+    # extractBag("Bagging", "dtree")
+    # extractBag("Bagging", "svm")
+    # extractBoost("Boosting", "dtree")
+    # extractBoost("Boosting", "svm")
 
-    extractBag("idf__Bagging", "dtree")
-    extractBag("idf__Bagging", "svm")
-    extractBoost("idf__Boosting", "dtree")
-    extractBoost("idf__Boosting", "svm")
+    # extractBag("idf__Bagging", "dtree")
+    # extractBag("idf__Bagging", "svm")
+    # extractBoost("idf__Boosting", "dtree")
+    # extractBoost("idf__Boosting", "svm")
     
+    extractBag("Bagging", "bayes")
+    extractBoost("Boosting", "bayes")

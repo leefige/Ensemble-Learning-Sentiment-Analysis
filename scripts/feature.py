@@ -54,6 +54,7 @@ def genTopWordSet(X, Y, N):
     topNorm = calcTopWords(norm, N)
     return list(topGood.union(topBad).union(topNorm))
 
+# self-implementation
 def genIDFDict(X, N=None):
     total = len(X)
     allWord = {}
@@ -151,6 +152,7 @@ def genXFeature(topSet, X):
         X_new.append(featLi)
     return X_new
 
+# self-implementation
 def genTFIDFFeature(idf, X):
     print("Generating tf-idf features...")
     featNum = len(idf)
@@ -176,12 +178,14 @@ def genTFIDFFeature(idf, X):
         X_new.append(featLi)
     return X_new
 
+# pre-process for using sklearn
 def skTFIDFPreproc(X):
     res = []
     for li in X:
         res.append(" ".join(li))
     return res
 
+# tf-idf with sklearn
 def genSkTFIDF(X, maxFeatures=None):
     # print("stop: ", list(stopWord.union(punc)))
     tfidfVecorizer = TfidfVectorizer(analyzer='word', max_features=maxFeatures, stop_words=list(stopWord.union(punc)))

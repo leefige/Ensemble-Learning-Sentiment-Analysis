@@ -27,7 +27,7 @@ def reWeight(weight, res, target):
         if res[i] != target[i]:
             err += weight[i]
 
-    # to weak, abort
+    # too weak, abort
     if err > 0.5:
         return None, 0
     
