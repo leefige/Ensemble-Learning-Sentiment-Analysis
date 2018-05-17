@@ -582,7 +582,7 @@ TF-IDF特征效果仍然较优，但在boost下迭代轮数仍然较少，不够
 必须承认，可能由于特征选择等原因，导致我实现的弱分类器本身性能一般，因此Ensemble Learning算法的结果也很难提高太多。现报告各组合在Kaggle上提交的结果：
 
 - Bagging + DTree: 0.57857
-- Bagging + SVM: 0.51549 (最好结果)
+- Bagging + SVM: 0.51549
 - AdaBoost.M1 + DTree: 0.62823
 - AdaBoost.M1 + SVM: 0.51491 (最好结果)
 
@@ -602,11 +602,18 @@ TF-IDF特征效果仍然较优，但在boost下迭代轮数仍然较少，不够
 
 ### 3. 关于组合
 
-就结果而言，最优的是Bagging + SVM。如前所述，由于弱分类器较弱，Boost无法实现应有的性能，而对于弱分类器本身，SVM强于DTree，因此该组合表现最好。
+根据之前的分析，理论上最优的是Bagging + SVM。如前所述，由于弱分类器较弱，Boost无法实现应有的性能，而对于弱分类器本身，SVM强于DTree，因此该组合应该表现最好。
 
+但事实上根据实际提交结果，最优结果为AdaBoost.M1 + SVM得到的。分析原因，一方面其实二者相差不多，有一定随机成分在其中；另一方面，还是由于弱分类器本身性能一般，因此Bagging可能出现“一群臭皮匠顶不上诸葛亮”的情况，但Boost虽然迭代轮数少，却因为专注于较“难”的样本，有可能有较好的表现。
 
 ## 参考文献
 
 1. [sklearn.svm.LinearSVC](http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn-svm-linearsvc)
 2. [sklearn.tree.DecisionTreeClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
 3. [sklearn.naive_bayes.MultinomialNB](http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB)
+4. [sklearn.model_selection.train_test_split](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html#sklearn.model_selection.train_test_split)
+5. [sklearn.feature_extraction.text.TfidfVectorizer](http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)
+6. [TF-IDF特征提取 用sklearn提取tfidf特征](https://blog.csdn.net/Techmonster/article/details/74905668)
+7. [bootstrap, boosting, bagging 几种方法的联系](https://blog.csdn.net/chenhongc/article/details/9404583)
+8. [Stanford NLP学习笔记：7. 情感分析（Sentiment）](https://www.cnblogs.com/arkenstone/p/6064196.html)
+9. [python scikit-learn计算tf-idf词语权重](https://blog.csdn.net/liuxuejiang158blog/article/details/31360765)
