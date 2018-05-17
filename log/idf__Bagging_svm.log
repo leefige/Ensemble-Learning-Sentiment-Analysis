@@ -148,3 +148,28 @@ Test accuracy: 0.8230
 Test RMSE: 0.5547
 ------------------------------------
 
+dtNum = 5, feature_num = 13000, test_percent = 0.10, sample_size = 0.75
+Test accuracy: 0.8303
+Test RMSE: 0.5387
+------------------------------------
+
+dtNum = 9, feature_num = 13000, test_percent = 0.10, sample_size = 0.75
+Test accuracy: 0.8266
+Test RMSE: 0.5440
+------------------------------------
+
+dtNum = 5, feature_num = 13000, test_percent = 0.10, sample_size = 0.75
+Test accuracy: 0.8357
+Test RMSE: 0.5336
+------------------------------------
+
+dtNum = 5, feature_num = 14000, test_percent = 0.10, sample_size = 0.75
+Test accuracy: 0.8253
+Test RMSE: 0.5612
+------------------------------------
+
+dtNum = 5, feature_num = 11000, test_percent = 0.10, sample_size = 0.75
+Test accuracy: 0.8321
+Test RMSE: 0.5274
+------------------------------------
+
