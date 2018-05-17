@@ -584,7 +584,7 @@ TF-IDF特征效果仍然较优，但在boost下迭代轮数仍然较少，不够
 - Bagging + DTree: 0.57857
 - Bagging + SVM: 0.51549 (最好结果)
 - AdaBoost.M1 + DTree: 0.62823
-- AdaBoost.M1 + SVM: 
+- AdaBoost.M1 + SVM: 0.51491 (最好结果)
 
 ## 讨论
 
