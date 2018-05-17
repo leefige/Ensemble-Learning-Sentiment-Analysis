@@ -579,6 +579,13 @@ TF-IDF特征效果仍然较优，但在boost下迭代轮数仍然较少，不够
 
 ## 结果报告
 
+必须承认，可能由于特征选择等原因，导致我实现的弱分类器本身性能一般，因此Ensemble Learning算法的结果也很难提高太多。现报告各组合在Kaggle上提交的结果：
+
+- 最好结果：0.52365（单一SVM实现）
+- Bagging + DTree: 0.57857
+- Bagging + SVM: 
+- AdaBoost.M1 + DTree: 
+- AdaBoost.M1 + SVM: 
 
 ## 讨论
 
