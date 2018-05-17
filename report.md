@@ -598,6 +598,15 @@ TF-IDF特征效果仍然较优，但在boost下迭代轮数仍然较少，不够
 
 而Bagging则不受到这种影响，因为它保证一定能实现给定数目的弱分类器。
 
+至于两种算法的异同，首先就相同点而言，都是Ensemble Learning算法，都是基于若干弱分类器，根据它们各自给出的结果通过投票方式，选出最终结果；就不同点而言，Bagging是相同模型在相同训练集（的子集）上得到若干弱分类器，Boost是同一模型通过赋予不同的样本权值进行多轮迭代，得到若干弱分类器；另外，就得到结果的方法而言，Bagging为公平投票，各弱分类器投票权值相同，而Boost为不公平投票，各弱分类器投票权值为各自β值。
+
 ### 3. 关于组合
 
 就结果而言，最优的是Bagging + SVM。如前所述，由于弱分类器较弱，Boost无法实现应有的性能，而对于弱分类器本身，SVM强于DTree，因此该组合表现最好。
+
+
+## 参考文献
+
+1. [sklearn.svm.LinearSVC](http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn-svm-linearsvc)
+2. [sklearn.tree.DecisionTreeClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
+3. [sklearn.naive_bayes.MultinomialNB](http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html#sklearn.naive_bayes.MultinomialNB)
